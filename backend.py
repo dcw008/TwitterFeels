@@ -7,7 +7,6 @@ app = Flask(__name__)
 @app.route('/twitter_sentiments/api/v1.0/trending', methods=['GET'])
 def get_tasks():
     tweets = twitter_extension.searchAndAnalyze()
-
     return jsonify({'tweets': tweets})
 
 
