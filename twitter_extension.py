@@ -34,7 +34,7 @@ def getTrendingSearches():
     return toSearch
 
 #gets the trending tweets by searching trending names based on location
-def getTrendingTweets():
+def searchAndAnalyze():
 
     #list to store the popular tweets
     allTweets = []
@@ -48,12 +48,16 @@ def getTrendingTweets():
     #search for each trending names and append json format of each tweet
     #cache our data into a external file to retrieve later
     for searchQuery in toSearch:
+        #dictionary with two keys: trends and tweets
         topicDict = {}
         topicDict['trend'] = searchQuery
         searchQueryResult = []
         #try to query
         try:
+            #perform the query on the trend
             response = tweepy.Cursor(api.search, q = searchQuery).items(MAX_TWEETS)
+
+            #query each object received from the response
             for object in response:
                 searchQueryResult.append(object._json)
 
@@ -62,6 +66,7 @@ def getTrendingTweets():
 
             #append the dictionary to the return list
             allTweets.append(topicDict)
+
 
         #catch any errors
         except tweepy.TweepError as e:
@@ -89,6 +94,11 @@ def getTrendingTweets():
         print('Dumping to file...')
         try:
             print('Opening file...')
+            print('Analyzing the tweets')
+
+            #analyze the the tweets
+            allTweets = analyzeTweets(allTweets)
+
             with open('data.txt', 'w') as outfile:
                 print('Writing data to file')
                 data = json.dumps(allTweets)
@@ -102,6 +112,7 @@ def getTrendingTweets():
 
 
 #analyzes the polarity and subjectivity of each tweet
+#takes in a list of dictionaries
 def analyzeTweets(allTweets):
 
     #add the text analysis to the dictionary
@@ -114,12 +125,12 @@ def analyzeTweets(allTweets):
             tweet['polarity'] = polarity
             tweet['subjectivity'] = subjectivity
 
-        for tweet in tweets:
-            print(tweet['text'])
-            print(tweet['polarity'])
-            print(tweet['subjectivity'])
-
-    print(len(allTweets))
+    #     for tweet in tweets:
+    #         print(tweet['text'])
+    #         print(tweet['polarity'])
+    #         print(tweet['subjectivity'])
+    #
+    # print(len(allTweets))
     return allTweets
 
 
