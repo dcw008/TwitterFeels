@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D9ED62235FB8C3AEA77F0E3F68B8A27637CED89C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D9ED62235FB8C3AEA77F0E3F68B8A27637CED89C" : 9223372036854775807,
+    "103F2508917973CC7BC3FC00FB956D77824FC0D0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5FECFFB6-2EE8-4CBC-8FCB-608DB34AC3F5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D9ED62235FB8C3AEA77F0E3F68B8A27637CED89C" : "twitter-clone\/",
+    "103F2508917973CC7BC3FC00FB956D77824FC0D0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "twitter-demo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "twitter-demo\/twitter-demo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dcw008\/twitter-clone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "103F2508917973CC7BC3FC00FB956D77824FC0D0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dcw008\/twitter-clone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D9ED62235FB8C3AEA77F0E3F68B8A27637CED89C"
+    }
+  ]
+}
